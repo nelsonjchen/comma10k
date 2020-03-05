@@ -1,10 +1,13 @@
+name: Pencil Tool Windows Compile
 on:
   push:
     paths:
       - 'pencil/**'
+      - '.github/workflows/pencil_tool_windows.yml'
   pull_request:
     paths:
       - 'pencil/**'
+      - '.github/workflows/pencil_tool_windows.yml'
 
 jobs:
   build:
