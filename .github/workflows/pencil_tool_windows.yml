@@ -1,3 +1,11 @@
+on:
+  push:
+    paths:
+      - 'pencil/'
+  pull_request:
+    paths:
+      - 'pencil/'
+
 jobs:
   build:
     runs-on: windows-latest
