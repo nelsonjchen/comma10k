@@ -22,5 +22,5 @@ jobs:
       - name: Archive Server Dist
         uses: actions/upload-artifact@v1
         with:
-          name: Extract this "dist" folder to pencil
+          name: Extract this dist folder to pencil folder
           path: pencil/dist
