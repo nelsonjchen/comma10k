@@ -1,10 +1,10 @@
 on:
   push:
     paths:
-      - 'pencil/'
+      - 'pencil/**'
   pull_request:
     paths:
-      - 'pencil/'
+      - 'pencil/**'
 
 jobs:
   build:
