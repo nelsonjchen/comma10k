@@ -12,6 +12,26 @@ colormap = get_colormap()
 
 onlycheck = os.getenv("ONLYCHECK") is not None
 
+# Only permit non-deprecated colors in `ONLYCHECK` mode
+if onlycheck:
+  colormap = {
+     key: value for (key, value) in colormap.items() if key in [
+       # Endian converted
+
+       # Road
+       0x202040,
+       # Lane Markings
+       0x0000ff,
+       # Undriveable
+       0x608080,
+       # Moveable
+       0x66ff00,
+       # My Car
+       0xff00cc,
+     ]
+  }
+
+
 def canon_mask(x):
   segi = fix(Image.open("masks/"+x))
 
